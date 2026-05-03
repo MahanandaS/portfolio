@@ -567,7 +567,7 @@ body::before {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: var(--space-2xl) var(--space-lg);
+  padding: 8rem var(--space-lg) var(--space-2xl) var(--space-lg);
 }
 
 .hero::before {
@@ -585,10 +585,11 @@ body::before {
 }
 
 .hero-content {
-  max-width: 1200px;
+  max-width: 1000px;
   text-align: center;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .hero h1 {
@@ -790,7 +791,7 @@ body::before {
 
 /* General Section Styles */
 .container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--space-2xl);
 }
@@ -960,7 +961,7 @@ section h2::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--space-xl);
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -1091,7 +1092,7 @@ section h2::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: var(--space-2xl);
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -1230,7 +1231,7 @@ section h2::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--space-2xl);
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -1408,7 +1409,7 @@ section h2::after {
 }
 
 .contact-content {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -2040,12 +2041,23 @@ section h2::after {
   }
 
   .hero {
-    padding: 6rem 1rem 4rem;
+    padding: 7rem 1rem 4rem;
     min-height: auto;
   }
 
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-subtitle {
@@ -2101,7 +2113,7 @@ section h2::after {
   }
 
   .hero {
-    padding: 4rem 1rem 3rem;
+    padding: 6rem 1rem 3rem;
   }
 
   .hero h1 {
@@ -2109,11 +2121,11 @@ section h2::after {
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hero-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   section {
