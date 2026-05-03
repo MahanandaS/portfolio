@@ -440,7 +440,7 @@ body::before {
 }
 
 .nav-container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-2xl);
   display: flex;
