@@ -51,12 +51,6 @@ function Hero() {
             </svg>
           </a>
         </div>
-        <div className="hero-scroll-indicator">
-          <div className="scroll-mouse">
-            <div className="scroll-wheel"></div>
-          </div>
-          <span>Scroll Down</span>
-        </div>
       </div>
     </section>
   )

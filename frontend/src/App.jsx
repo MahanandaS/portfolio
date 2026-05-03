@@ -10,6 +10,12 @@ import Navigation from './components/Navigation'
 function App() {
   return (
     <div className="App">
+      {/* Floating Code Elements */}
+      <div className="floating-code">function()&#123;...&#125;</div>
+      <div className="floating-code">const data = [...]</div>
+      <div className="floating-code">class Component&#123;...&#125;</div>
+      <div className="floating-code">import React from...</div>
+
       <Navigation />
       <Hero />
       <About />
