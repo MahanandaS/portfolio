@@ -1,7 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
@@ -12,14 +22,17 @@ function Navigation() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <div className="nav-brand">Mahananda</div>
-        <button 
-          className="nav-toggle" 
+        <div className="nav-brand" onClick={() => scrollToSection('home')}>
+          Mahananda
+        </div>
+        <button
+          className="nav-toggle"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
         >
-          ☰
+          {isOpen ? '✕' : '☰'}
         </button>
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li><a onClick={() => scrollToSection('home')}>Home</a></li>
