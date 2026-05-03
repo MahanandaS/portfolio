@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import './index.css'
+import './App.css'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Education from './components/Education'
+import Contact from './components/Contact'
+import Navigation from './components/Navigation'
 
 function App() {
-  const [bgColor, setBgColor] = useState('#ffffff')
-
-  const colors = ['#ffffff', '#3498db', '#2ecc71', '#f39c12', '#e74c3c', '#9b59b6', '#1abc9c']
-
-  const changeBackground = () => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)]
-    setBgColor(randomColor)
-  }
-
   return (
-    <div className="container" style={{ backgroundColor: bgColor }}>
-      <div className="content">
-        <h1>Background Color Changer</h1>
-        <p>Click the button to change the background color</p>
-        <button onClick={changeBackground} className="button">
-          Change Background Color
-        </button>
-      </div>
+    <div className="App">
+      <Navigation />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Education />
+      <Contact />
+      <footer className="footer">
+        <p>&copy; 2026 Mahananda. All rights reserved.</p>
+      </footer>
     </div>
   )
 }
